@@ -1,0 +1,4 @@
+<launch>
+<arg name="map_name" default="map.yaml"/>
+<node name="map_server" pkg="map_server" type="map_server" args="$(find brico_boot)/maps/$(arg map_name)" respawn="true" />
+</launch>
