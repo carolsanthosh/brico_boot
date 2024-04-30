@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<robot name="two_wheeled_robot">
+
+  <!-- Base link -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <cylinder length="0.5" radius="0.225"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- Left wheel -->
+  <joint name="left_wheel_joint" type="continuous">
+    <origin xyz="0 -0.225 0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="left_wheel"/>
+  </joint>
+  <link name="left_wheel">
+    <visual>
+      <geometry>
+        <cylinder length="0.05" radius="0.1"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- Right wheel -->
+  <joint name="right_wheel_joint" type="continuous">
+    <origin xyz="0 0.225 0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="right_wheel"/>
+  </joint>
+  <link name="right_wheel">
+    <visual>
+      <geometry>
+        <cylinder length="0.05" radius="0.1"/>
+      </geometry>
+    </visual>
+  </link>
+
+</robot>
+

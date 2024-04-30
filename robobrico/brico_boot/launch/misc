@@ -1,0 +1,4 @@
+ <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
+        <param name="map_udpate_interval" value="5.0"/>
+        <param name="delta" value="0.1"/>
+    </node>
